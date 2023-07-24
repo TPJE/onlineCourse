@@ -17,7 +17,7 @@ public class SystemApplication {
     public static void main(String[] args) {
         SpringApplication app = new SpringApplication(SystemApplication.class);
         Environment env = app.run(args).getEnvironment();
-        log.info("Start-up Successfully!!");
-        log.info("System add: \thttp://127.0.0.1:{}", env.getProperty("server.port"));
+        log.info("Start Successfully!!");
+        log.info("System addr: \thttp://127.0.0.1:{}", env.getProperty("server.port"));
     }
 }
