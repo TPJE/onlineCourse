@@ -1,13 +1,13 @@
-package ca.bytetube.online_course;
+package ca.bytetube.course;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class OnlineCourseApplication {
+public class EurekaCourseApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(OnlineCourseApplication.class, args);
+		SpringApplication.run(EurekaCourseApplication.class, args);
 	}
 
 }
