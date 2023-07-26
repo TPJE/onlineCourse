@@ -2,23 +2,23 @@ package ca.bytetube.server.domain;
 
 
 public class Test {
-    private Integer area_id;
+    private Integer id;
 
-    private String area_name;
+    private String name;
 
-    public Integer getArea_id() {
-        return area_id;
+    public Integer getId() {
+        return id;
     }
 
-    public void setArea_id(Integer area_id) {
-        this.area_id = area_id;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public String getArea_name() {
-        return area_name;
+    public String getName() {
+        return name;
     }
 
-    public void setArea_name(String area_name) {
-        this.area_name = area_name;
+    public void setName(String name) {
+        this.name = name;
     }
 }

@@ -9,10 +9,12 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.env.Environment;
 
+import java.io.IOException;
+
 @SpringBootApplication
 @EnableEurekaClient
 @ComponentScan("ca.bytetube")
-@MapperScan("ca.bytetube.system.mapper")
+@MapperScan("ca.bytetube.server.mapper")
 public class SystemApplication {
     private static final Logger log = LoggerFactory.getLogger(SystemApplication.class);
 

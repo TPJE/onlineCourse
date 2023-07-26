@@ -1,4 +1,4 @@
-package ca.bytetube.server.cotroller;
+package ca.bytetube.system.cotroller;
 
 import ca.bytetube.server.domain.Test;
 import ca.bytetube.server.service.TestService;
