@@ -6,11 +6,12 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 public interface TestMapper {
+    List<Test> list();
     long countByExample(TestExample example);
 
     int deleteByExample(TestExample example);
 
-    int deleteByPrimaryKey(Integer id);
+    int deleteByPrimaryKey(String id);
 
     int insert(Test record);
 
@@ -18,7 +19,7 @@ public interface TestMapper {
 
     List<Test> selectByExample(TestExample example);
 
-    Test selectByPrimaryKey(Integer id);
+    Test selectByPrimaryKey(String id);
 
     int updateByExampleSelective(@Param("record") Test record, @Param("example") TestExample example);
 
