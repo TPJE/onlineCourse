@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <classPathEntry location="/Users/tippi/.m2/repository/com/mysql/mysql-connector-j/8.0.33/mysql-connector-j-8.0.33.jar"/>
+    <context id="Mysql" targetRuntime="Mybatis3" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+<!--        Added toString() into generated Entity -->
+        <plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>
+
+<!--        Skip comment-->
+        <commentGenerator>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/communityApp?useUnicode=true&amp;characterEncoding=UTF8"
+                        userId="jamespoju"
+                        password="JI#rul41i6bj6!"
+        />
+
+<!--        domain class path-->
+        <javaModelGenerator targetProject="src/main/java"
+                            targetPackage="ca.bytetube.server.domain"
+        />
+<!--        mapper.xml path-->
+        <sqlMapGenerator targetProject="src/main/resources"
+                         targetPackage="mapper"
+        />
+<!--        mapper class path-->
+        <javaClientGenerator targetProject="src/main/java"
+                             targetPackage="ca.bytetube.server.mapper"
+                             type="XMLMAPPER"
+        />
+        <table tableName="test" domainObjectName="Test"/>
+    </context>
+</generatorConfiguration>
