@@ -7,21 +7,20 @@ import Welcome from './views/admin/welcome.vue';
 Vue.use(Router);
 
 export default new Router({
-    mode: 'history',
-    base: process.env.BASE_URL,
-    routes: [{
+  mode: 'history',
+  base: process.env.BASE_URL,
+  routes: [{
       path: '*',
       redirect: "/login",
-    }, {
+  }, {
       path: '/login',
       component: Login
-    }, {
+  }, {
       path: '/admin',
       component: Admin,
       children: [{
-        // Skip "/" in children path
-        path: 'welcome',
-        component: Welcome,
+          path: 'welcome',
+          component: Welcome,
       }]
-    }]
+  }]
 })
