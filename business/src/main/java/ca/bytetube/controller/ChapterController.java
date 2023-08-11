@@ -1,6 +1,7 @@
 package ca.bytetube.controller;
 
 import ca.bytetube.server.domain.Chapter;
+import ca.bytetube.server.dto.ChapterDto;
 import ca.bytetube.server.service.ChapterService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,7 +15,7 @@ public class ChapterController {
     private ChapterService chapterService;
 
     @RequestMapping("/chapter")
-    public List<Chapter> chapter(){
+    public List<ChapterDto> chapter(){
         return chapterService.list();
     }
 }
