@@ -986,8 +986,18 @@
 export default {
     name: "chapter",
     mounted: function() {
+    let _this = this;
+    _this.list();
     // Activate sidebar
 //        this.$parent.activeSidebar("business-chapter-sidebar");
+    },
+    methods: {
+        list() {
+            let _this = this;
+            _this.$ajax.get("http://127.0.0.1:9002/business/admin/chapter/list").then((res) => {
+                console.log("Chapter search result: ", res);
+            })
+        }
     }
 }
 </script>
