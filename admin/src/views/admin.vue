@@ -504,7 +504,7 @@
           <div class="footer-content">
             <span class="bigger-120">
               <span class="blue bolder">ByteTube</span>
-              在线视频课程 &copy; 2099-2099
+              Online Course &copy; 2099-2099
             </span>
 
             &nbsp; &nbsp;
@@ -576,9 +576,9 @@ export default {
      */
     activeSidebar: function (id) {
       // Remove "active" from siblings and siblings' li (if applicable), and set selected sidebar attribute "active"
-      $("#" + id).siblings.removeClass("active");
+      $("#" + id).siblings().removeClass("active");
       $("#" + id)
-        .siblings.find("li")
+        .siblings().find("li")
         .removeClass("active");
       $("#" + id).addClass("active");
 
